@@ -2,19 +2,170 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/svg+xml" href="./src/data/img/tom.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>the web template of oo1 studio</title>
+        <meta
+            name="description"
+            content="Theo (Thai) Tran - Software Developer and legal owner of oo1 studio. Specializing in Android, Go, and TypeScript."
+        />
+        <meta property="og:title" content="Theo Tran | Software Developer" />
+        <meta
+            property="og:description"
+            content="The personal hub and digital business card of Theo Tran, the legal owner of oo1 studio."
+        />
+        <meta
+            property="og:image"
+            content="https://theo.oo1.studio/src/data/img/tom.svg"
+        />
+        <title>Theo</title>
         <link rel="stylesheet" href="https://core.oo1.studio/outsync.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
+        <script type="module" src="/src/main.ts" defer></script>
     </head>
-    <body>
-        <div
-            id="main"
-            style="--layer: 1"
-            class="bg-blue-600 h-(--layer-height) rounded-(--layer-corner-radius) m-(--padding) text-center flex items-center justify-center text-(--highlight-contrast-color) font-mono"
-        >
-            template
-        </div>
-        <script type="module" src="/src/main.ts"></script>
+    <!-- 1. Added `min-h-screen flex flex-col` to body so it stretches to the bottom of the window -->
+    <body
+        class="font-['Courier_Prime',monospace] bg-white text-black dark:bg-black dark:text-white min-h-screen flex flex-col"
+    >
+        <!-- 2. Added `flex-1` to main so it fills the body (respecting your padding margin) -->
+        <main class="flex-1 flex flex-col m-(--padding) gap-(--padding)">
+            <div
+                style="--layer: 1"
+                class="text-white min-h-(--layer-height) rounded-(--layer-corner-radius) flex flex-row justify-between gap-(--padding)"
+            >
+                <div>
+                    <div
+                        style="--layer: 1"
+                        class="bg-black text-white dark:bg-white dark:text-black min-h-(--layer-height) rounded-(--layer-corner-radius) p-(--padding) px-(--layer-corner-radius) flex justify-center items-center"
+                    >
+                        Theo (Thai) Tran <br />
+                    </div>
+                </div>
+
+                <img
+                    style="--layer: 1"
+                    src="./src/data/img/tom.svg"
+                    alt="tom"
+                    class="max-h-(--layer-height)"
+                />
+            </div>
+
+            <!-- 3. Made this block a flex container to vertically center the text in the empty space -->
+            <div
+                class="flex-1 flex text-justify justify-center p-(--padding) items-center text-lg md:text-xl"
+            >
+                <div>
+                    I'm the owner of
+                    <a
+                        href="https://oo1.studio"
+                        target="_blank"
+                        class="text-(--highlight-color) font-bold underline hover:opacity-75 transition-opacity"
+                        >oo1 studio</a
+                    >, all of the projects released under the name of oo1 studio
+                    was made by me. I'm currently focusing on Android and Web
+                    Development, with a little bit of C.
+                </div>
+            </div>
+
+            <div
+                id="bottom-panel"
+                class="flex flex-row w-full gap-(--padding) justify-between"
+            >
+                <div
+                    class="portrait:flex-1 rounded-(--layer-corner-radius) flex flex-col"
+                >
+                    <div class="flex-1"></div>
+                    <div
+                        id="contact"
+                        style="--layer: 1"
+                        class="box-border flex flex-col landscape:flex-row justify-around gap-(--padding) border-black dark:border-white border-dashed border-2 p-(--padding) min-h-(--layer-height) rounded-(--layer-corner-radius)"
+                    >
+                        <a
+                            href="mailto:mailoftheo@gmail.com"
+                            style="--layer: 2"
+                            class="h-(--layer-height) rounded-(--layer-corner-radius) px-(--padding) flex justify-center items-center hover:opacity-75 transition-opacity"
+                        >
+                            mailoftheo@gmail.com
+                        </a>
+                        <div
+                            class="flex flex-row justify-around gap-(--padding)"
+                        >
+                            <a
+                                href="https://linkedin.com/in/theothaitran"
+                                target="_blank"
+                                style="--layer: 2"
+                                class="flex-1 h-(--layer-height) rounded-(--layer-corner-radius) px-(--padding) flex justify-center items-center hover:opacity-75 transition-opacity border-black dark:border-white border-dashed border-2"
+                            >
+                                LinkedIn
+                            </a>
+                            <a
+                                href="https://github.com/marcinlowercase"
+                                target="_blank"
+                                style="--layer: 2"
+                                class="flex-1 h-(--layer-height) rounded-(--layer-corner-radius) px-(--padding) flex justify-center items-center hover:opacity-75 transition-opacity border-black dark:border-white border-dashed border-2"
+                            >
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style="--layer: 1"
+                    class="flex flex-row items-center gap-(--padding) bg-black dark:bg-white text-white dark:text-black rounded-(--layer-corner-radius) p-(--padding)"
+                >
+                    <div
+                        class="[writing-mode:vertical-rl] rotate-180 text-sm pt-(--padding)"
+                    >
+                        tech I currently use
+                    </div>
+                    <div
+                        id="tech"
+                        style="--layer: 2"
+                        class="flex flex-col bg-black w-(--layer-height) rounded-(--layer-corner-radius) p-(--padding) justify-around gap-(--padding)"
+                    >
+                        <img
+                            style="--layer: 3"
+                            src="./src/data/img/android.svg"
+                            alt="Android icon"
+                            class="max-h-(--layer-height) flex-1"
+                        />
+                        <img
+                            style="--layer: 3"
+                            src="./src/data/img/typescript.svg"
+                            alt="TypeScript icon"
+                            class="max-h-(--layer-height) flex-1"
+                        />
+                        <img
+                            style="--layer: 3"
+                            src="./src/data/img/tailwindcss.svg"
+                            alt="Tailwind CSS icon"
+                            class="max-h-(--layer-height) flex-1"
+                        />
+                        <img
+                            style="--layer: 3"
+                            src="./src/data/img/go.svg"
+                            alt="Go icon"
+                            class="max-h-(--layer-height) flex-1"
+                        />
+                        <img
+                            style="--layer: 3"
+                            src="./src/data/img/deno.svg"
+                            alt="Deno icon"
+                            class="max-h-(--layer-height) flex-1"
+                        />
+                        <img
+                            style="--layer: 3"
+                            src="./src/data/img/c.svg"
+                            alt="C icon"
+                            class="max-h-(--layer-height) flex-1"
+                        />
+                    </div>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
