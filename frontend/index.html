@@ -29,7 +29,7 @@
     </head>
     <!-- 1. Added `min-h-screen flex flex-col` to body so it stretches to the bottom of the window -->
     <body
-        class="font-['Courier_Prime',monospace] bg-white text-black dark:bg-black dark:text-white min-h-screen flex flex-col"
+        class="font-['Courier_Prime',monospace] bg-white text-black dark:bg-black dark:text-white min-h-dvh flex flex-col"
     >
         <!-- 2. Added `flex-1` to main so it fills the body (respecting your padding margin) -->
         <main class="flex-1 flex flex-col m-(--padding) gap-(--padding)">
@@ -115,17 +115,17 @@
                 </div>
                 <div
                     style="--layer: 1"
-                    class="flex flex-row [@media(max-height:750px)]:flex-col items-center gap-(--padding) bg-black dark:bg-white text-white dark:text-black rounded-(--layer-corner-radius) p-(--padding)"
+                    class="flex flex-row [@media(max-height:750px)_and_(orientation:landscape)]:flex-col items-center gap-(--padding) bg-black dark:bg-white text-white dark:text-black rounded-(--layer-corner-radius) p-(--padding)"
                 >
                     <div
-                        class="[writing-mode:vertical-rl] [@media(max-height:750px)]:[writing-mode:horizontal-tb] rotate-180 [@media(max-height:750px)]:rotate-0 text-sm pt-(--padding)"
+                        class="[writing-mode:vertical-rl] [@media(max-height:750px)_and_(orientation:landscape)]:[writing-mode:horizontal-tb] rotate-180 [@media(max-height:750px)_and_(orientation:landscape)]:rotate-0 text-sm pt-(--padding) [@media(max-height:750px)_and_(orientation:landscape)]:pt-0"
                     >
                         tech I currently use
                     </div>
                     <div
                         id="tech"
                         style="--layer: 2"
-                        class="flex flex-col [@media(max-height:750px)]:flex-row bg-black w-(--layer-height)[@media(max-height:750px)]:w-full h-auto[@media(max-height:750px)]:h-(--layer-height) rounded-(--layer-corner-radius) p-(--padding) justify-around gap-(--padding)"
+                        class="flex flex-col [@media(max-height:750px)_and_(orientation:landscape)]:flex-row bg-black w-(--layer-height) [@media(max-height:750px)_and_(orientation:landscape)]:w-full h-auto[@media(max-height:750px)_and_(orientation:landscape)]:h-(--layer-height) rounded-(--layer-corner-radius) p-(--padding) justify-around gap-(--padding)"
                     >
                         <img
                             style="--layer: 3"
