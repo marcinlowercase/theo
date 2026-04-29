@@ -55,17 +55,21 @@
                 />
             </div>
 
-            <!-- 3. Made this block a flex container to vertically center the text in the empty space -->
             <div
-                class="flex-1 flex text-justify justify-center p-(--padding) items-center text-lg md:text-xl"
+                class="flex-1 flex text-justify justify-center p-(--padding) items-center text-lg md:text-xl leading-relaxed"
             >
                 <div>
                     I'm the owner of
                     <a
                         href="https://oo1.studio"
                         target="_blank"
-                        class="text-(--highlight-color) font-bold underline hover:opacity-75 transition-opacity"
-                        >oo1 studio</a
+                        class="inline-flex items-center gap-1.5 px-3 py-1 mx-1 bg-(--highlight-color) text-(--highlight-contrast-color) font-bold rounded hover:scale-110 active:scale-95 transition-all group shadow-lg"
+                    >
+                        oo1 studio
+                        <span
+                            class="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-base leading-none"
+                            >↗</span
+                        > </a
                     >. All of my independent software projects are published
                     under the name of oo1. I'm currently focusing on Android and
                     Web Development, with a little bit of C.
@@ -77,9 +81,24 @@
                 class="flex flex-row w-full gap-(--padding) justify-between"
             >
                 <div
-                    class="portrait:flex-1 rounded-(--layer-corner-radius) flex flex-col"
+                    class="portrait:flex-1 rounded-(--layer-corner-radius) flex flex-col gap-(--padding)"
                 >
-                    <div class="flex-1"></div>
+                    <a
+                        href="https://oo1.studio"
+                        target="_blank"
+                        style="--layer: 1"
+                        class="flex-1 flex items-center justify-center rounded-(--layer-corner-radius) text-(--highlight-contrast-color) border-2 border-transparent hover:border-(--highlight-color) bg-(--highlight-color) hover:bg-(--highlight-contrast-color) dark:hover:bg-white hover:text-(--highlight-color) transition-colors group p-(--padding)"
+                    >
+                        <div
+                            class="text-base sm:text-xl uppercase tracking-widest font-bold flex items-center gap-2 group-hover:scale-110 transition-transform"
+                        >
+                            See my projects
+                            <span
+                                class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                                >↗</span
+                            >
+                        </div>
+                    </a>
                     <div
                         id="contact"
                         style="--layer: 1"
@@ -119,14 +138,15 @@
                     class="flex flex-row [@media(max-height:750px)_and_(orientation:landscape)]:flex-col items-center gap-(--padding) bg-black dark:bg-white text-white dark:text-black rounded-(--layer-corner-radius) p-(--padding)"
                 >
                     <div
-                        class="[writing-mode:vertical-rl] [@media(max-height:750px)_and_(orientation:landscape)]:[writing-mode:horizontal-tb] rotate-180 [@media(max-height:750px)_and_(orientation:landscape)]:rotate-0 text-sm pt-(--padding) [@media(max-height:750px)_and_(orientation:landscape)]:pt-0"
+                        style="--layer: 2"
+                        class="mx-(--layer-corner-radius) flex-1 flex flex-row justify-center items-center [writing-mode:vertical-rl] [@media(max-height:750px)_and_(orientation:landscape)]:[writing-mode:horizontal-tb] rotate-180 [@media(max-height:750px)_and_(orientation:landscape)]:rotate-0 text-sm pt-(--padding) [@media(max-height:750px)_and_(orientation:landscape)]:pt-0"
                     >
                         tech I currently use
                     </div>
                     <div
                         id="tech"
                         style="--layer: 2"
-                        class="flex flex-col [@media(max-height:750px)_and_(orientation:landscape)]:flex-row bg-black w-(--layer-height) [@media(max-height:750px)_and_(orientation:landscape)]:w-full h-auto [@media(max-height:750px)_and_(orientation:landscape)]:h-(--layer-height) rounded-(--layer-corner-radius) p-(--padding) justify-around gap-(--padding)"
+                        class="flex flex-col [@media(max-height:750px)_and_(orientation:landscape)]:flex-row bg-black w-(--layer-height)[@media(max-height:750px)_and_(orientation:landscape)]:w-full h-auto[@media(max-height:750px)_and_(orientation:landscape)]:h-(--layer-height) rounded-(--layer-corner-radius) p-(--padding) justify-around gap-(--padding) overflow-auto"
                     >
                         <img
                             style="--layer: 3"
